@@ -59,6 +59,21 @@ namespace TI89
             id = (int)comm.ExecuteScalar(); // id vai receber
         }
 
+        public void Alterar ()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.Connection = Banco.Abrir();
+            comm.CommandType = System.Data.CommandType.StoredProcedure;
+            comm.CommandText = "sp_InsertUpdate";
+            // paramentros como está no banco de dados
+            comm.Parameters.AddWithValue("_id", this.ID);
+            comm.Parameters.AddWithValue("_Nome", Nome);
+            comm.Parameters.AddWithValue("_Email", Email);
+            comm.Parameters.AddWithValue("_acao", MySqlDbType.Int32).Value = 2;  // quando for 1 faz in
+            comm.ExecuteNonQuery(); //
+            mensagem = "Registro Alterado com Sucesso"; 
+        }
+
         //metodo consultar
         public void Consultar(int _ID) 
         {

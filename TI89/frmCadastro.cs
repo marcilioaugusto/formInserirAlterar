@@ -20,8 +20,19 @@ namespace TI89
 
         private void frmCadastro_Load(object sender, EventArgs e)
         {
-            
+            btnAlterar.Enabled = false; // botão fica desabilitado
+            btnExcluir.Enabled = false;
         }
+
+        public void Limpa() 
+        {
+            txtID.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+
+            //
+        }
+
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -58,9 +69,15 @@ namespace TI89
             else
             {
                 MessageBox.Show(us.mensagem, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnAlterar.Enabled = false; // botão fica desabilitado
-                btnExcluir.Enabled = false;
+                Limpa();
             }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Cliente us = new Cliente(Convert.ToInt32(txtID.Text), txtNome.Text, txtEmail.Text);
+            us.Alterar();
+            MessageBox.Show(us.mensagem, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
