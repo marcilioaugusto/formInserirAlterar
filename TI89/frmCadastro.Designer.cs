@@ -77,15 +77,16 @@
             // 
             // txtNome
             // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(87, 120);
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(266, 20);
+            this.txtNome.Size = new System.Drawing.Size(248, 29);
             this.txtNome.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(87, 160);
+            this.txtEmail.Location = new System.Drawing.Point(87, 187);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(266, 20);
@@ -106,7 +107,7 @@
             // 
             this.btnSalvar.Location = new System.Drawing.Point(87, 213);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(79, 28);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 28);
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -114,9 +115,9 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(183, 213);
+            this.btnAlterar.Location = new System.Drawing.Point(191, 213);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(85, 28);
+            this.btnAlterar.Size = new System.Drawing.Size(69, 28);
             this.btnAlterar.TabIndex = 12;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -126,7 +127,7 @@
             // 
             this.btnExcluir.Location = new System.Drawing.Point(288, 213);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(65, 25);
+            this.btnExcluir.Size = new System.Drawing.Size(65, 28);
             this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
